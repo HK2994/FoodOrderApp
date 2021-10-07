@@ -20,6 +20,7 @@ const Cart = () => {
 				{meals.map((meal) => {
 					return (
 						<CartItem
+							key={meal.id}
 							meal={meal}
 							addAmount={addAmount}
 							reduceAmount={reduceAmount}

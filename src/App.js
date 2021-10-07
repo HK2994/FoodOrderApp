@@ -32,11 +32,13 @@ function App() {
 	};
 
 	const reduceAmountHandler = (meal) => {
-		if (meal.amount > 0) {
+		if (meal.amount > 1) {
 			dispatch({
 				type: "UPDATE_AMOUNT",
 				payload: { id: meal.id, amount: -1 },
 			});
+		} else {
+			dispatch({ type: "REMOVE_CART", payload: { id: meal.id } });
 		}
 	};
 

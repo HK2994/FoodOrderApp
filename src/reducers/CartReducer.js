@@ -22,8 +22,11 @@ export const CartReducer = (state, action) => {
 
 			return { meals: state.meals.concat(addedMeal) };
 		case "REMOVE_CART":
-			const { id } = action.payload;
-			return { meals: state.meals.filter((meal) => meal.id !== id) };
+			return {
+				meals: state.meals.filter(
+					(meal) => meal.id !== action.payload.id
+				),
+			};
 		case "UPDATE_AMOUNT":
 			const updatedIndex = state.meals.findIndex(
 				(meal) => meal.id === action.payload.id
