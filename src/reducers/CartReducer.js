@@ -45,6 +45,8 @@ export const CartReducer = (state, action) => {
 			}
 
 			return { meals: state.meals };
+		case "CLEAR_CART":
+			return { meals: [] }
 		default:
 			return { meals: state.meals };
 	}

@@ -7,4 +7,5 @@ export const CartContext = React.createContext({
 	addMeal: (meal) => {},
 	addAmount: (id) => {},
 	reduceAmount: (id) => {},
+	clearCart: () => {},
 });

@@ -42,6 +42,12 @@ function App() {
 		}
 	};
 
+	const clearCart = () => {
+		dispatch({
+			type: "CLEAR_CART",
+		});
+	};
+
 	return (
 		<CartContext.Provider
 			value={{
@@ -51,6 +57,7 @@ function App() {
 				hideCartHandler,
 				addAmount: addAmountHandler,
 				reduceAmount: reduceAmountHandler,
+				clearCart,
 			}}
 		>
 			{showCart && <Cart />}
